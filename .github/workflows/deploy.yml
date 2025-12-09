@@ -23,11 +23,11 @@ jobs:
           mkdir -p dist
           cp -r *.html *.js *.css CNAME dist/
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: main
-          force_orphan: true
-          cname: infotechsynergy.co
+          target_branch: gh-pages
+          build_dir: dist
+          fqdn: infotechsynergy.co
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
