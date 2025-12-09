@@ -117,28 +117,34 @@ app.controller('GoalsController', function ($scope) {
 app.controller('LeadershipController', function ($scope) {
   $scope.leaders = [
     {
-      name: 'John Smith',
-      title: 'Chief Executive Officer',
+      name: 'Sri Bhaskar',
+      title: 'Chairman',
       description:
-        "With over 15 years of experience in enterprise technology, John leads our company's strategic vision and growth initiatives.",
+        'As the Chairman, Sri Bhaskar provides strategic direction and leadership to InfoTech Synergy, guiding our growth and innovation initiatives.',
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Kaushal Bhaskar',
       title: 'Chief Technology Officer',
       description:
-        'Sarah brings deep technical expertise in AI and machine learning, leading our technology strategy and innovation efforts.',
+        'Leading our technology vision and strategy, Kaushal ensures we stay at the forefront of innovation and emerging technologies.',
     },
     {
-      name: 'Michael Chen',
-      title: 'Head of Client Success',
+      name: 'Ramissetti Srikanth',
+      title: 'Principal Engineer',
       description:
-        'Michael ensures our clients receive exceptional value from our solutions. His client-first approach has helped maintain our 100% client satisfaction rate.',
+        'Srikanth leads our technical implementations and architecture decisions, ensuring robust and scalable solutions for our clients.',
     },
     {
-      name: 'Emily Rodriguez',
-      title: 'Director of Innovation',
+      name: 'Mydhili Priya',
+      title: 'Product Owner',
       description:
-        'Emily leads our research and development initiatives, focusing on emerging technologies and their practical applications for enterprise clients.',
+        'Mydhili drives our product strategy and ensures our solutions align perfectly with client needs and market demands.',
+    },
+    {
+      name: 'Anjali Naga Sai',
+      title: 'Frontend Engineer',
+      description:
+        'Anjali crafts engaging user experiences and ensures our solutions are both beautiful and functional.',
     },
   ];
 });
