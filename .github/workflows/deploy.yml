@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: |
           mkdir -p dist
-          cp -r *.html *.js *.css dist/
+          cp -r *.html *.js *.css CNAME dist/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
