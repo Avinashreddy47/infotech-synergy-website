@@ -1,25 +1,28 @@
 var app = angular.module('companyApp', ['ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
+  // Get the repository name from the URL for GitHub Pages
+  var baseUrl = window.location.pathname.split('/')[1] || '';
+  baseUrl = baseUrl ? '/' + baseUrl : '';
   $routeProvider
     .when('/', {
-      templateUrl: 'home.html',
+      templateUrl: baseUrl + '/home.html',
       controller: 'HomeController',
     })
     .when('/projects', {
-      templateUrl: 'projects.html',
+      templateUrl: baseUrl + '/projects.html',
       controller: 'ProjectsController',
     })
     .when('/missions', {
-      templateUrl: 'missions.html',
+      templateUrl: baseUrl + '/missions.html',
       controller: 'MissionsController',
     })
     .when('/goals', {
-      templateUrl: 'goals.html',
+      templateUrl: baseUrl + '/goals.html',
       controller: 'GoalsController',
     })
     .when('/leadership', {
-      templateUrl: 'leadership.html',
+      templateUrl: baseUrl + '/leadership.html',
       controller: 'LeadershipController',
     })
     .when('/contact', {
@@ -29,6 +32,12 @@ app.config(function ($routeProvider) {
     .otherwise({
       redirectTo: '/',
     });
+
+  // Configure HTML5 mode
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false,
+  });
 });
 
 app.controller('HomeController', function ($scope) {
